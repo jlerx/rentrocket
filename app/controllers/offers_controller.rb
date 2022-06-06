@@ -38,5 +38,4 @@ class OffersController < ApplicationController
   def offer_params
     params.require(:offer).permit(:title, :price, :brand, :model, :year, :horsepower, :km_age, :body_type)
   end
-
 end
