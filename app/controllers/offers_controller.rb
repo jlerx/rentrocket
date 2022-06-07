@@ -1,4 +1,5 @@
 class OffersController < ApplicationController
+  before_action :find_offer, only: [:destroy, :update, :show]
   def index
     @offers = Offer.All
   end
