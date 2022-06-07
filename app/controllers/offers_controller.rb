@@ -6,7 +6,6 @@ class OffersController < ApplicationController
   end
 
   def show
-    @orders = Order.new
   end
 
   def new
@@ -43,6 +42,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:title, :price, :brand, :model, :year, :horsepower, :km_age, :body_type)
+    params.require(:offer).permit(:title, :price, :brand, :model, :year, :horsepower, :km_age, :body_type, :user_id)
   end
 end

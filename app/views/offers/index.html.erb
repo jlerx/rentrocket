@@ -1,19 +1,18 @@
 <div class="index">
-<% @offers.each do |offer| %>
+  <% @offers.each do |offer| %>
   <div class="offer-card">
-  <div class="img">
-    <span id="favorite" class="iconify" data-icon="bi:heart"></span>
-  </div>
-  <div class="infos">
-    <div class="description">
-      <h1 class="model-name"><%= offer.model %></h1>
-      <h2 class="new">New *</h2>
+    <div class="img">
+      <span id="favorite" class="iconify" data-icon="bi:heart"></span>
     </div>
-      <h3 class="owner">Julien Leroux, Lyon - <%= offer.km_age %>km<br>
-      <span id="price"><%= offer.price %>€</span> / day</h3>
+    <div class="infos">
+      <div class="description">
+        <h1 class="model-name"><%= offer.model %></h1>
+        <h2 class="new">New *</h2>
+      </div>
+        <h3 class="owner"><%= offer.user.name %>, Lyon - <%= offer.km_age %>km<br>
+        <span id="price"><%= offer.price %>€</span> / day</h3>
+    </div>
   </div>
-</div>
 <% end %>
-
   <%= render "shared/navbar" %>
 </div>
