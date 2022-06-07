@@ -108,50 +108,6 @@ vhl6 = Offer.create(
   user: user1
 )
 
-vhl7 = Offer.create(
-  title: "Chevrolet Corvette C8",
-  price: "700",
-  brand: "Chevrolet",
-  model: "Corvette C8",
-  horsepower: "450",
-  km_age: "8000",
-  body_type: "2",
-  user: user2
-)
-
-vhl8 = Offer.create(
-  title: "Mazda MX-5",
-  price: "500",
-  brand: "Mazda",
-  model: "MX-5",
-  horsepower: "370",
-  km_age: "14000",
-  body_type: "3",
-  user: user4
-)
-
-vhl9 = Offer.create(
-  title: "Volkswagen Golf GTI TCR",
-  price: "350",
-  brand: "Volkswagen",
-  model: "Golf GTI TCR",
-  horsepower: "370",
-  km_age: "11000",
-  body_type: "2",
-  user: user2
-)
-
-vhl10 = Offer.create(
-  title: "Subaru Impreza",
-  price: "350",
-  brand: "Subaru",
-  model: "Impreza",
-  horsepower: "480",
-  km_age: "9500",
-  body_type: "2",
-  user: user4
-)
-
 
 vhl1.image.attach(io: img1, filename: 'ferrari.jpg', content_type: 'image/jpg')
 vhl2.image.attach(io: img2, filename: 'porsche.jpg', content_type: 'image/jpg')

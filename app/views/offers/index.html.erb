@@ -1,4 +1,8 @@
 <div class="index">
+  <div class="top-section">
+    <div class="search-bar-top">
+    </div>
+  </div>
   <% @offers.each do |offer| %>
   <div class="offer-card">
     <div class="img" style="background-image: url(<%= offer.image.attached? ? cl_image_path(offer.image.key) : asset_path("ferrari.jpg") %>)">
