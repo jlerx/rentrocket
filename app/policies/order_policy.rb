@@ -4,17 +4,18 @@ class OrderPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
     def create?
       true
     end
 
     def show?
-      create?
+      true
     end
 
     def edit?
-      update?
+      true
     end
 
     def update?
@@ -24,5 +25,4 @@ class OrderPolicy < ApplicationPolicy
     def destroy?
       true
     end
-  end
 end

@@ -6,16 +6,8 @@ class OfferPolicy < ApplicationPolicy
     end
   end
 
-  def index?
-    true
-  end
-
   def show?
-    index?
-  end
-
-  def new?
-    create?
+    true
   end
 
   def create?
@@ -23,7 +15,7 @@ class OfferPolicy < ApplicationPolicy
   end
 
   def edit?
-    update?
+    true
   end
 
   def destroy?

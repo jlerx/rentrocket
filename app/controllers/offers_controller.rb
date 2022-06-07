@@ -6,7 +6,7 @@ class OffersController < ApplicationController
   end
 
   def show
-    @orders = Order.new
+    @order = Order.new
     authorize @order
     authorize @offer
   end
