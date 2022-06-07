@@ -1,0 +1,17 @@
+<div class="show-offer">
+  <div class="img" style="background-image: url(<%= @offer.image.attached? ? cl_image_path(@offer.image.key) : asset_path("ferrari.jpg") %>)"></div>
+  <div class="infos">
+    <div class="description">
+      <div class="title">
+        <h1 class="model-name"><%= @offer.title %></h1>
+        <h3 class="owner"><%= @offer.user.name %>, Lyon - <%= @offer.km_age %>km<br></h3>
+      </div>
+    </div>
+    <div class="rarity">
+      <div class="rarity-text">
+        <h4 class="ratity-title">This car is a rare gem.</h4>
+        <p class="rarity-p">This model has just been<br> released and is very popular on<br> Rent Rocket.</p>
+      </div>
+      <span class="iconify" data-icon="fa:diamond"></span>
+    </div>
+</div>

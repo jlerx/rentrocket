@@ -42,5 +42,16 @@ vhl2 = Offer.create(
   user: user1
 )
 
+vhl3 = Offer.create(
+  title: "Porsche Taycan RS",
+  price: "350",
+  brand: "Porsche",
+  model: "TAYCAN RS",
+  horsepower: "400",
+  km_age: "15000",
+  body_type: "5",
+  user: user1
+)
+
 vhl1.image.attach(io: img1, filename: 'ferrari.jpg', content_type: 'image/jpg')
 vhl2.image.attach(io: img2, filename: 'porsche.jpg', content_type: 'image/jpg')
