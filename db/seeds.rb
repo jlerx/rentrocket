@@ -6,10 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Offer.destroy_all
+User.destroy_all
 
 user1 = User.create(
   email: "toto@gmail.com",
-  password: "toto"
+  password: "totototo",
+  password_confirmation: "totototo",
+  name: "Clémence"
 )
 
 Offer.create(
@@ -20,5 +23,5 @@ Offer.create(
   horsepower: "500",
   km_age: "1500",
   body_type: "3",
-  user: user
+  user: user1
 )
