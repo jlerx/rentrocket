@@ -25,7 +25,7 @@ end
     horsepower: rand(200..500),
     km_age: Faker::Vehicle.mileage,
     body_type: Faker::Vehicle.door_count,
-    photo: Faker::LoremFlickr.image(size: "50x60", search_terms: ['sports', 'car'])
+    photo: Faker::LoremFlickr.image(size: "2000x2000", search_terms: ['sports', 'car'])
   )
   offer.save
 end
