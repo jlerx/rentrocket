@@ -1,4 +1,18 @@
 <div class="index">
+  <% @offers.each do |offer| %>
+  <div class="offer-card">
+    <div class="img" style="background-image: url(<%= offer.image.attached? ? cl_image_path(offer.image.key) : asset_path("ferrari.jpg") %>)">
+      <span id="favorite" class="iconify" data-icon="bi:heart"></span>
+    </div>
+    <div class="infos">
+      <div class="description">
+        <h1 class="model-name"><%= offer.model %></h1>
+        <h2 class="new">New *</h2>
+      </div>
+        <h3 class="owner"><%= offer.user.name %>, Lyon - <%= offer.km_age %>km<br>
+        <span id="price"><%= offer.price %>€</span> / day</h3>
+    </div>
+  </div>
+<% end %>
   <%= render "shared/navbar" %>
-  <h1>index</h1>
 </div>
