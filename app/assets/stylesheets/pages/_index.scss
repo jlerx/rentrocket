@@ -1,9 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
 .index {
-  background-color: aqua;
+  background-color: $blue;
   width: 100vw;
   height: auto;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
