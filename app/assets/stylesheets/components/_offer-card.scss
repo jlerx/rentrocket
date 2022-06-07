@@ -33,13 +33,18 @@
     height: 150px;
     background-color: aqua;
     display: flex;
-    .model-name {
+    .model-name , .new{
       font-family: 'Montserrat';
       font-style: normal;
       font-weight: 700;
       font-size: 18px;
       line-height: 22px;
       justify-content: left;
+      margin-top: 15px;
+      margin-left: 30px;
+    }
+    .new {
+      margin-left: 140px;
     }
   }
 }
