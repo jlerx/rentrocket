@@ -4,39 +4,33 @@ class OfferPolicy < ApplicationPolicy
     def resolve
       scope.all
     end
+  end
 
-    def index?
-      true
-    end
+  def index?
+    true
+  end
 
-    def show?
-      index?
-    end
+  def show?
+    index?
+  end
 
-    def new?
-      create?
-    end
+  def new?
+    create?
+  end
 
-    def create?
-      true
-    end
+  def create?
+    true
+  end
 
-    def edit?
-      update?
-    end
+  def edit?
+    update?
+  end
 
-    def update?
-      user.admin ? true : owner_of?
-    end
+  def destroy?
+    record.user == user || user.admin?
+  end
 
-    def destroy?
-      user.admin ? true : owner_of?
-    end
-
-    private
-
-    def owner_of?
-      record.user == user
-    end
+  def update?
+    record.user == user || user.admin?
   end
 end

@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
   def create
     @offer = Offer.find(params[:offer_id])
     @order = Order.new(order_params)
-    @orders.offer = @bed
+    @orders.offer = @offer
     @orders.user = current_user
     if @order.save
       redirect_to order_path(@order)
