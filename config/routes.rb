@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   resources :offers do
-    resources :orders, only: [:create]
+    resources :orders, except: [:destroy]
   end
-  resources :orders, only: [:index, :show, :destroy, :update]
+  resources :orders, only: [:destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
