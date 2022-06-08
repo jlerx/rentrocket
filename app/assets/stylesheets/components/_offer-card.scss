@@ -9,6 +9,9 @@
   padding: 20px 0px;
   border-bottom: white 0.2px solid;
   border-width: 90%;
+  &hover {
+    background-color: darkblue;
+  }
 
   .img {
     background-image: image-url("ferrari.jpg");
