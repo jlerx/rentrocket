@@ -5,6 +5,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: center;
   padding: 20px 0px;
   border-bottom: white 0.2px solid;
   border-width: 90%;
@@ -34,7 +35,7 @@
 
 
 .infos {
-  margin-left: 25px;
+  margin-right: 90px;
   .description {
     width: 100%;
     height: 50px;
