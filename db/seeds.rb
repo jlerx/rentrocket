@@ -12,6 +12,10 @@ User.destroy_all
 
 img1 = URI.open("https://res.cloudinary.com/valentinmarcouxdev/image/upload/v1654609470/j5mk5eje6uphcww4lvw0.jpg")
 img2 = URI.open("https://res.cloudinary.com/valentinmarcouxdev/image/upload/v1654609479/xaemzotsfxlzdo4h2mrl.jpg")
+img3 = URI.open("https://res.cloudinary.com/valentinmarcouxdev/image/upload/v1654692849/rskzkcabkumvllrgcuse.jpg")
+img4 = URI.open("https://res.cloudinary.com/valentinmarcouxdev/image/upload/v1654692840/h13wxhad4ctcf7hvozlg.jpg")
+img5 = URI.open("https://res.cloudinary.com/valentinmarcouxdev/image/upload/v1654692827/ojsxhoayus1wv0xtwpsr.jpg")
+img6 = URI.open("https://res.cloudinary.com/valentinmarcouxdev/image/upload/v1654692834/vu8gsyjnnjd9kukm06pj.jpg")
 
 user1 = User.create(
   email: "toto@gmail.com",
@@ -108,6 +112,9 @@ vhl6 = Offer.create(
   user: user1
 )
 
-
 vhl1.image.attach(io: img1, filename: 'ferrari.jpg', content_type: 'image/jpg')
 vhl2.image.attach(io: img2, filename: 'porsche.jpg', content_type: 'image/jpg')
+vhl3.image.attach(io: img3, filename: 'honda.jpg', content_type: 'image/jpg')
+vhl4.image.attach(io: img4, filename: 'lambo.jpg', content_type: 'image/jpg')
+vhl5.image.attach(io: img5, filename: 'lambo.jpg', content_type: 'image/jpg')
+vhl6.image.attach(io: img6, filename: 'honda.jpg', content_type: 'image/jpg')
