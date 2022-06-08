@@ -3,16 +3,16 @@ class OrdersController < ApplicationController
   before_action :set_order, except: [:index, :new, :create] #only:[:show, :update, :destroy]
 
   def create
-    # @offer = Offer.find(params[:offer_id])
     @order = Order.new(order_params)
     @order.offer = @offer
     @order.user = current_user
-    if @order.save
-      redirect_to offer_order_path(@offer, @order)
+    if @order.save!
+      redirect_to offer_orders_path(@offer, @order)
     else
       render :new
     end
     authorize @order
+    #raise
   end
 
   def index
@@ -50,7 +50,7 @@ class OrdersController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:offer_id, :user_id, :date_start, :date_end)
+    params.require(:order).permit(:offer, :user, :date_start, :date_end)
   end
 
   def set_order

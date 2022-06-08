@@ -6,4 +6,5 @@ Rails.application.routes.draw do
   end
   resources :orders, only: [:destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get 'my_orders', to: 'pages#my-orders'
 end
