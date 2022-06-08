@@ -6,23 +6,23 @@ class OrderPolicy < ApplicationPolicy
     end
   end
 
-    def create?
-      true
-    end
+  def create?
+    true
+  end
 
-    def show?
-      true
-    end
+  def show?
+    true
+  end
 
-    def edit?
-      true
-    end
+  def edit?
+    true
+  end
 
-    def update?
-      true
-    end
+  def destroy?
+    record.user == user || user.admin?
+  end
 
-    def destroy?
-      true
-    end
+  def update?
+    record.user == user || user.admin?
+  end
 end
