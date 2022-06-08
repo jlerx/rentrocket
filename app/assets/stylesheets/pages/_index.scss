@@ -1,5 +1,9 @@
 // Import page-specific CSS files here.
 @import "home";
+@import "done-order";
+@import "new-order";
+@import "show-offer";
+@import "show-order";
 .index {
   background-color: $blue;
   width: 100vw;
