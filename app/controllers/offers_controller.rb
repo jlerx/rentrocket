@@ -17,7 +17,7 @@ class OffersController < ApplicationController
   end
 
   def create
-    @offer = Offer.create(offer_params)
+    @offer = Offer.new(offer_params)
     @offer.user = current_user
     if @offer.save
       redirect_to offer_path(@offer)
@@ -33,7 +33,7 @@ class OffersController < ApplicationController
 
   def update
     @offer.update(offer_params)
-    redirect_to offer_path(@offer)
+    redirect_to offer_path
     authorize @offer
   end
 

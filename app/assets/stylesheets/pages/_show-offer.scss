@@ -4,11 +4,36 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  overflow-x: hidden;
+  .back {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: auto;
+    margin: 20px 15px;
+    background-color: $pink;
+    color: white;
+    font-size: 16px;
+    position: fixed;
+    top: 0;
+    border-radius: 12px;
+    padding: 10px 20px;
+    &:hover {
+      background-color: $red;
+    }
+    a {
+      text-decoration: none;
+    }
+  }
   .infos {
     display: flex;
     flex-direction: column;
     background-color: $blue;
     width: 100%;
+  }
+  .title {
+    width: 100vw;
   }
   .img {
     height: 270px;
@@ -19,6 +44,7 @@
   }
   .description {
     height: 100px;
+    width: 400;
     display: block;
     margin: 20px 15px;
     border-bottom: white 1px solid;
@@ -35,25 +61,117 @@
   }
   .rarity {
     height: 120px;
-    width: 100vw;
+    width: 100%;
     display: flex;
     align-items: center;
     border-bottom: white 1px solid;
     color: white;
-    margin: 20px 15px;
+    margin: 10px 15px;
+    line-height: 1;
     .ratity-title {
-      margin-top: 15px;
       font-family: 'Montserrat';
       font-weight: 800;
       font-size: 18px;
       line-height: 22px;
     }
   }
+  .country {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: white 1px solid;
+    color: white;
+    margin: 0px 15px;
+    .country-title {
+      margin-top: 0px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+    }
+    .country-p {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+  .options {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: white 1px solid;
+    color: white;
+    margin: 0px 15px;
+    .options-title {
+      margin-top: 0px;
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 22px;
+      line-height: 27px;
+    }
+    .options-p {
+      font-family: 'Montserrat';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 22px;
+      line-height: 27px;
+    }
+  }
+
+
+  .booking {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+    .book-bouton {
+
+      a {
+        border-radius: 8px;
+        width: 300px;
+        background-color: $pink;
+        padding: 10px 30px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        color: #FFFFFF;
+        text-decoration: none;
+        &:hover {
+          background-color: $red;
+        }
+      }
+    }
+    .price {
+      #price-amount {
+        font-weight: 700;
+      }
+      .price-title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;;
+        font-size: 22px;
+        line-height: 27px;
+        color: white;
+      }
+    }
+  }
+
+
+
   .iconify {
     color: $pink;
-    width: 40px;
-    height: 40px;
-    margin-left: 20px;
+    width: 50px;
+    height: 50px;
+    margin-left: 40px;
     justify-content: end;
   }
 }

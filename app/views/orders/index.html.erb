@@ -1,0 +1,4 @@
+<% @orders.each do |order| %>
+  <li><%= order.offer.title %> du <%= order.date_start %> au <%= order.date_end %>
+    <%= link_to "Annuler", order_path(order), method: :delete, data: { confirm: "Are you sure?" }, class: 'backlink' %></li>
+<% end %>

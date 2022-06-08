@@ -1,9 +1,11 @@
 <div class="index">
   <div class="top-section">
     <div class="search-bar-top">
+    <h1>Welcome on RentRocket 🚀</h1>
     </div>
   </div>
   <% @offers.each do |offer| %>
+  <%= link_to offer_path(offer) do%>
   <div class="offer-card">
     <div class="img" style="background-image: url(<%= offer.image.attached? ? cl_image_path(offer.image.key) : asset_path("ferrari.jpg") %>)">
       <span id="favorite" class="iconify" data-icon="bi:heart"></span>
@@ -17,6 +19,7 @@
         <span id="price"><%= offer.price %>€</span> / day</h3>
     </div>
   </div>
+  <% end %>
 <% end %>
   <%= render "shared/navbar" %>
 </div>
