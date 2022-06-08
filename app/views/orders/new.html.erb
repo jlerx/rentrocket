@@ -1,5 +1,13 @@
-<%= simple_form_for([@offer,@order]) do |f| %>
-  <%= f.input :date_start %>
-  <%= f.input :date_end %>
-  <%= f.submit "Submit your reservation" %>
-<% end %>
+<div class="new-order-view">
+  <div class="order-top">
+    <span class="iconify" data-icon="clarity:date-line"></span>
+    <h1 class="order-title">Choose your dates</h1>
+  </div>
+  <div class="order-form">
+    <%= simple_form_for([@offer,@order]) do |f| %>
+      <%= f.input :date_start%>
+      <%= f.input :date_end %>
+      <%= f.submit "Submit your reservation" %>
+    <% end %>
+  </div>
+</div>
