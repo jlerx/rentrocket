@@ -76,7 +76,7 @@ vhl3 = Offer.create(
 )
 
 vhl4 = Offer.create(
-  title: "Bentley Continental GT Cabriolet",
+  title: "Bentley Continental",
   price: "500",
   brand: "Bentley",
   model: "CONTINENTAL GT CABRIOLET",
@@ -87,7 +87,7 @@ vhl4 = Offer.create(
 )
 
 vhl5 = Offer.create(
-  title: "Lamborghini Huracan Evo RWD ",
+  title: "Lamborghini Huracan",
   price: "800",
   brand: "Lamborghini",
   model: "Huracan Evo RWD",
