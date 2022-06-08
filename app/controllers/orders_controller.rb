@@ -35,6 +35,7 @@ class OrdersController < ApplicationController
   end
 
   def update
+    @order.status = false
     @order.save
     redirect_to orders_path
     authorize @order
