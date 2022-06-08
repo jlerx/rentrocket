@@ -43,7 +43,7 @@ class OrdersController < ApplicationController
 
   def destroy
     @order.destroy
-    redirect_to orders_path
+    redirect_to offers_path
     authorize @order
   end
 
