@@ -12,6 +12,29 @@
   justify-content: center;
   flex-direction: column;
   margin-bottom: 80px;
+  .btn-logout {
+    background-color: $pink;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6px 12px;
+    color: $blue;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    border: $blue 1px solid;
+    margin: auto;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 30px;
+
+  }
 }
 
 .top-section {

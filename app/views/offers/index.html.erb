@@ -2,7 +2,6 @@
   <div class="top-section">
     <div class="search-bar-top">
     <h1>Welcome on RentRocket 🚀</h1>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn btn-danger" %>
     </div>
   </div>
   <% @offers.each do |offer| %>
@@ -22,5 +21,6 @@
   </div>
   <% end %>
 <% end %>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-logout" %>
   <%= render "shared/navbar" %>
 </div>
