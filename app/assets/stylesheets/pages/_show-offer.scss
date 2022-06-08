@@ -102,6 +102,46 @@
       line-height: 27px;
     }
   }
+
+
+  .booking {
+    height: 110px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px;
+    .book-bouton {
+      a {
+        border-radius: 8px;
+        width: 300px;
+        background-color: $pink;
+        padding: 10px 30px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        color: #FFFFFF;
+        text-decoration: none;
+      }
+    }
+    .price {
+      #price-amount {
+        font-weight: 700;
+      }
+      .price-title {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 300;;
+        font-size: 22px;
+        line-height: 27px;
+        color: white;
+      }
+    }
+  }
+
+
+
   .iconify {
     color: $pink;
     width: 50px;

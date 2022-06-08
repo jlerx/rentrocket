@@ -1,12 +1,14 @@
 <div class="show-offer">
   <div class="img" style="background-image: url(<%= @offer.image.attached? ? cl_image_path(@offer.image.key) : asset_path("ferrari.jpg") %>)"></div>
   <div class="infos">
+
     <div class="description">
       <div class="title">
         <h1 class="model-name"><%= @offer.title %></h1>
         <h3 class="owner"><%= @offer.user.name %>, Lyon - <%= @offer.km_age %>km<br></h3>
       </div>
     </div>
+
     <div class="rarity">
       <div class="rarity-text">
         <h4 class="ratity-title">This car is a rare gem.</h4>
@@ -14,22 +16,30 @@
       </div>
       <span class="iconify" data-icon="fa:diamond"></span>
     </div>
+
     <div class="country">
       <div class="country-text">
         <h4 class="country-title">Car designed by </h4>
         <p class="country-p"><%= @offer.brand %>, in ITALY</p>
       </div>
     </div>
+
     <div class="options">
       <div class="options-text">
         <h4 class="options-title"><%= @offer.horsepower %>CV  ·  <%= @offer.user.name %></h4>
         <p class="options-p"><%= @offer.body_type %> seats</p>
       </div>
     </div>
+
     <div class="booking">
-      <div class="bouton">
-    <%= link_to "log in",  "#" %>
-  </div>
+      <div class="price">
+        <h4 class="price-title"> <span id="price-amount"><%= @offer.price %></span> € / day</h4>
+      </div>
+      <div class="booking-div">
+        <div class="book-bouton">
+          <%= link_to "book",  new_offer_order_path(@offer) %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
