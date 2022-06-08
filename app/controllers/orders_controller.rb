@@ -3,12 +3,12 @@ class OrdersController < ApplicationController
   before_action :set_order, except: [:index, :new, :create] #only:[:show, :update, :destroy]
 
   def create
-    @offer = Offer.find(params[:offer_id])
+    # @offer = Offer.find(params[:offer_id])
     @order = Order.new(order_params)
-    @orders.offer = @offer
-    @orders.user = current_user
+    @order.offer = @offer
+    @order.user = current_user
     if @order.save
-      redirect_to order_offer_path(@offer, @order)
+      redirect_to offer_order_path(@offer, @order)
     else
       render :new
     end
@@ -16,7 +16,8 @@ class OrdersController < ApplicationController
   end
 
   def index
-    @orders = Order.where(order_id: current_user.id)
+    # @orders = Order.where(order_id: current_user.id)
+    @orders = Order.all
   end
 
   def new
@@ -25,7 +26,7 @@ class OrdersController < ApplicationController
   end
 
   def show
-    @offer = order.offer
+    #@offer = order.offer
     authorize @order
   end
 
@@ -34,14 +35,14 @@ class OrdersController < ApplicationController
   end
 
   def update
-    @order.save!
-    redirect_to order_path(@order)
+    @order.save
+    redirect_to orders_path
     authorize @order
   end
 
   def destroy
     @order.destroy
-    redirect_to offers_path
+    redirect_to orders_path
     authorize @order
   end
 
@@ -56,6 +57,6 @@ class OrdersController < ApplicationController
   end
 
   def set_offer
-    @offer = Offer.find(params[:id])
+    @offer = Offer.find(params[:offer_id])
   end
 end
