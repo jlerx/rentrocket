@@ -16,9 +16,20 @@
     </div>
     <div class="country">
       <div class="country-text">
-        <h4 class="country-title">This car is a rare gem.</h4>
-        <p class="country-p">This model has just been<br> released and is very popular on<br> Rent Rocket.</p>
+        <h4 class="country-title">Car designed by </h4>
+        <p class="country-p"><%= @offer.brand %>, in ITALY</p>
       </div>
-      <span class="iconify" data-icon="fa:diamond"></span>
     </div>
+    <div class="options">
+      <div class="options-text">
+        <h4 class="options-title"><%= @offer.horsepower %>CV  ·  <%= @offer.user.name %></h4>
+        <p class="options-p"><%= @offer.body_type %> seats</p>
+      </div>
+    </div>
+    <div class="booking">
+      <div class="bouton">
+    <%= link_to "log in",  "#" %>
+  </div>
+    </div>
+  </div>
 </div>
