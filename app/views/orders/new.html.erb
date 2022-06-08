@@ -5,9 +5,9 @@
   </div>
   <div class="order-form">
     <%= simple_form_for([@offer,@order]) do |f| %>
-      <%= f.input :date_start%>
-      <%= f.input :date_end %>
-      <%= f.submit "Submit your reservation" %>
+      <%= f.input :date_start, :label => "Start date"%>
+      <%= f.input :date_end, :label => "End date" %>
+      <%= f.submit "Submit" %>
     <% end %>
   </div>
 </div>
