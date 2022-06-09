@@ -1,8 +1,12 @@
-// Specific CSS for your home-page
+// Specific CSS for your home-pag
 .home {
+  overflow: hidden ;
   width: 100%;
   height: 100vh;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   flex-direction: column;
   text-align: center;
   background: image-url("light-trails.jpg");
@@ -11,9 +15,8 @@
   background-repeat: no-repeat;
   background-position: center;
   img {
-    height: auto;
+    height: 200px;
     width: 200px;
-    margin-left: 24%;
     margin-top: 150px;
   }
 }
