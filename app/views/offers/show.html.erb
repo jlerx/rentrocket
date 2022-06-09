@@ -40,20 +40,20 @@
         <div class="book-bouton">
           <%= link_to "book", new_offer_order_path(@offer) %>
         </div>
-        <% if policy(@offer).update? %>
-          <div class="book-bouton">
-            <%= link_to 'Edit', edit_offer_path, class: 'backlink' %>
-          </div>
-        <% end %>
-        <% if policy(@offer).destroy? %>
-          <div class="book-bouton">
-            <%= link_to "Delete", offer_path(@offer), method: :delete, data: { confirm: "Are you sure?" } %>
-          </div>
-        <% end %>
       </div>
     </div>
-    <%= render "shared/reviews" %>
+    <%= render "shared/reviews"%>
+      <div class="offer-actions-title">
+        <h1 class="offer-title">Manage your Offer</h1>
+      </div>
+    <div class="actions">
+        <% if policy(@offer).update? %>
+            <%= link_to 'Edit', edit_offer_path, class: 'backlink' %>
+        <% end %>
+        <% if policy(@offer).destroy? %>
+            <%= link_to "Delete", offer_path(@offer), method: :delete, data: { confirm: "Are you sure?" } %>
+        <% end %>
+    </div>
 </div>
 <%= link_to "Delete", destroy_user_session_path, method: :delete, class: "btn-logout" %>
 <%= render "shared/navbar" %>
-

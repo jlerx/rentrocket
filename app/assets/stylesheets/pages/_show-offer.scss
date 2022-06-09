@@ -175,3 +175,36 @@
     justify-content: end;
   }
 }
+
+.actions {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-bottom: 100px;
+  a {
+    border-radius: 8px;
+    background-color: $pink;
+    padding: 10px 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    color: #FFFFFF;
+    text-decoration: none;
+    &:hover {
+      background-color: $red;
+    }
+  }
+}
+.offer-title {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+  text-align: center;
+  color: white;
+  border-top: 1px solid white;
+  padding-top: 25px;
+}
