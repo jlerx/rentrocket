@@ -36,12 +36,14 @@ class OrdersController < ApplicationController
 
   def update
     @order.status = false
+    @user = current_user
     @order.save
     redirect_to dashboard_path
     authorize @order
   end
 
   def destroy
+    @order.user = current_user
     @order.destroy
     redirect_to offers_path
     authorize @order
