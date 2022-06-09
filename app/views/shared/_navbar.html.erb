@@ -21,7 +21,7 @@
   </div>
   <%= link_to dashboard_path do%>
   <div class="navbar-btn">
-  console
+  <% console %>
     <% if @orders %>
       <% pending = @orders.select {|order| order.status == true} %>
       <% if pending.count == 0 %>
