@@ -5,66 +5,11 @@
 @import "show-offer";
 @import "show-order";
 @import "new-session";
+@import "index_offer";
 
-.index {
+body {
   background-color: $blue;
-  width: 100vw;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 80px;
-  .btn-logout {
-    background-color: $pink;
-    display: flex;
-    width: 50%;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 6px 12px;
-    color: $blue;
-    text-decoration: none;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    border: $blue 1px solid;
-    margin: auto;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 12px;
-    padding: 12px 30px;
-
-  }
 }
-
-.top-section {
-  background-color: $blue;
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  border-bottom: 1px white solid;
-
-  h1 {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 1.2;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-  }
-  // .search-bar-top {
-  //   height: 63px;
-  //   width: 360px;
-  //   background-color: $blue;
-  //   border: 1px solid #000000;
-  //   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  //   border-radius: 50px;
-  // }
+html {
+  scroll-behavior: smooth;
 }

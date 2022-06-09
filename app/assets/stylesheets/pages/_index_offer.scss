@@ -1,0 +1,84 @@
+.index {
+  background-color: $blue;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 80px;
+  .btn-logout {
+    background-color: $pink;
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6px 12px;
+    color: $blue;
+    text-decoration: none;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    border: $blue 1px solid;
+    margin: auto;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 30px;
+
+  }
+}
+
+.top-section {
+  background-color: $blue;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  border-bottom: 1px white solid;
+
+  h1 {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+  }
+  #query {
+    width: 350px;
+    height: 40px;
+    background: $blue;
+    border: 1px solid #000000;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    color: white;
+    padding-left: 40px;
+    margin-bottom: 20px;
+  }
+  #query::placeholder {
+    color: white;
+    opacity: 0.8;
+  }
+  #search-loop {
+    justify-content: flex-start;
+    color: white;
+    position: absolute;
+    margin-left: -150px;
+    margin-top: 50px;
+
+
+  }
+}
+body > div.index > div.top-section > form > input.btn.btn-primary {
+  display: none;
+}
