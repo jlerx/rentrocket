@@ -1,0 +1,20 @@
+<div class="container newoffer">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h1>Add a new offer</h1>
+        <h2>Which brand of car will you offer?</h2>
+        <%= simple_form_for @offer do |f| %>
+          <%= f.input :brand, placeholder: 'Enter' %>
+          <%= f.input :model, placeholder: 'Enter' %>
+          <%= f.input :horsepower, placeholder: 'Enter' %>
+          <%= f.input :year, placeholder: 'Enter' %>
+          <%= f.input :body_type, placeholder: 'Enter' %>
+          <%= f.input :color, :collection => %w[blue yellow red black] %>
+          <%= f.input :image %>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

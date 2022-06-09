@@ -54,6 +54,8 @@ vhl1 = Offer.create(
   horsepower: "500",
   km_age: "1500",
   body_type: "3",
+  year: 1985,
+  color: "red",
   user: user1
 )
 
@@ -65,6 +67,8 @@ vhl2 = Offer.create(
   horsepower: "400",
   km_age: "15000",
   body_type: "5",
+  year: 2003,
+  color: "black",
   user: user2
 )
 
@@ -76,6 +80,8 @@ vhl3 = Offer.create(
   horsepower: "450",
   km_age: "12000",
   body_type: "4",
+  year: 2006,
+  color: "yellow",
   user: user3
 )
 
@@ -87,6 +93,8 @@ vhl4 = Offer.create(
   horsepower: "450",
   km_age: "12000",
   body_type: "4",
+  year: 1995,
+  color: "red",
   user: user4
 )
 
@@ -98,6 +106,8 @@ vhl5 = Offer.create(
   horsepower: "325",
   km_age: "19000",
   body_type: "2",
+  year: 1985,
+  color: "black",
   user: user2
 )
 
@@ -109,6 +119,8 @@ vhl6 = Offer.create(
   horsepower: "320",
   km_age: "13000",
   body_type: "3",
+  year: 2002,
+  color: "yellow",
   user: user1
 )
 
