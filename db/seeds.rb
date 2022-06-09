@@ -17,6 +17,8 @@ img4 = URI.open("https://res.cloudinary.com/valentinmarcouxdev/image/upload/v165
 img5 = URI.open("https://res.cloudinary.com/valentinmarcouxdev/image/upload/v1654692827/ojsxhoayus1wv0xtwpsr.jpg")
 img6 = URI.open("https://res.cloudinary.com/valentinmarcouxdev/image/upload/v1654692834/vu8gsyjnnjd9kukm06pj.jpg")
 
+puts ("Toutes les images ont été upload")
+
 user1 = User.create(
   email: "toto@gmail.com",
   password: "totototo",
@@ -45,6 +47,8 @@ user4 = User.create(
   password_confirmation: "julienjulien",
   name: "Julien"
 )
+
+puts ("Tous les Users ont étés créées")
 
 vhl1 = Offer.create(
   title: "Ferrari 488GTB",
@@ -124,9 +128,13 @@ vhl6 = Offer.create(
   user: user1
 )
 
+puts ("Tous les véhicules ont été crées")
+
 vhl1.image.attach(io: img1, filename: 'ferrari.jpg', content_type: 'image/jpg')
 vhl2.image.attach(io: img2, filename: 'porsche.jpg', content_type: 'image/jpg')
 vhl3.image.attach(io: img3, filename: 'honda.jpg', content_type: 'image/jpg')
 vhl4.image.attach(io: img4, filename: 'lambo.jpg', content_type: 'image/jpg')
 vhl5.image.attach(io: img5, filename: 'lambo.jpg', content_type: 'image/jpg')
 vhl6.image.attach(io: img6, filename: 'honda.jpg', content_type: 'image/jpg')
+
+puts ("Images attachées")

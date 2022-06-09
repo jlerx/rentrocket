@@ -4,6 +4,9 @@
   flex-direction: column;
   width: 100%;
   height: 100vh;
+  label {
+    display: none;
+  }
   .order-top {
     display: flex;
     padding: 20px;
@@ -38,15 +41,6 @@
     .order_date_end{
       margin-top: 60px;
     }
-    label {
-      color: white;
-      font-family: 'Montserrat';
-      font-style: normal;
-      font-weight: 600;
-      font-size: 40px;
-      line-height: 22px;
-      margin-bottom: 45px;
-    }
     select {
       padding: 10px 30px;
       border-radius: 12px;
@@ -75,4 +69,9 @@
   font-style: normal;
   font-weight: 600;
   font-size: 25px;
+}
+
+
+.new-offer-view .offer-form label {
+  display: none;
 }
