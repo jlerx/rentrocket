@@ -57,6 +57,13 @@
     }
     input {
       border-radius: 12px;
+      background-color: $pink;
+      opacity: 0.6;
+      color: $blue;
+      ::placeholder {
+        color: $blue;
+        opacity: 1;
+      }
     }
 
 

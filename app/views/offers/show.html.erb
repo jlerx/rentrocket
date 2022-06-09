@@ -53,6 +53,7 @@
       </div>
     </div>
     <%= render "shared/reviews" %>
-  </div>
-  <%= render "shared/navbar" %>
 </div>
+<%= link_to "Delete", destroy_user_session_path, method: :delete, class: "btn-logout" %>
+<%= render "shared/navbar" %>
+
