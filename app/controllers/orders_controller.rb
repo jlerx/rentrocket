@@ -7,7 +7,7 @@ class OrdersController < ApplicationController
     @order.offer = @offer
     @order.user = current_user
     if @order.save!
-      redirect_to offer_orders_path(@offer, @order)
+      redirect_to dashboard_path
     else
       render :new
     end
@@ -37,7 +37,7 @@ class OrdersController < ApplicationController
   def update
     @order.status = false
     @order.save
-    redirect_to orders_path
+    redirect_to dashboard_path
     authorize @order
   end
 
