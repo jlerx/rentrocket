@@ -1,6 +1,6 @@
 <div class="navbar">
-  <a href="#query">
-  <div class="navbar-btn">
+  <a href="">
+  <div class="navbar-btn" >
     <span class="iconify" data-icon="bi:search"></span>
     <label>explorer</label>
   </div>
@@ -9,10 +9,12 @@
     <span class="iconify" data-icon="bi:heart">favorites</span>
     <label>favorites</label>
   </div>
+  <%= link_to offers_path do%>
   <div class="navbar-btn">
     <span class="iconify" data-icon="emojione-monotone:racing-car">cars</span>
     <label>cars</label>
   </div>
+  <% end %>
   <div class="navbar-btn">
     <span class="iconify" data-icon="bi:chat-square">messages</span>
     <label>messages</label>
