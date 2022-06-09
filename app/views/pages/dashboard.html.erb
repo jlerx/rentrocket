@@ -1,0 +1,21 @@
+<h1>Dashboard</h1>
+<h2>Your offers</h2>
+<% @offers.each do |offer| %>
+  <li><h3> <%= offer.title %> </h3></li>
+<% end %>
+<h2>Demands</h2>
+<% @demands_reservation.each do |demand| %>
+  <%= demand.offer.name %>
+  <%= demand.user.email %>
+  <%= demand.date_start %>
+  <%= demand.date_end %>
+
+  <%= link_to "Ok",
+              offer_order_path(demand.offer, demand),
+              method: :patch
+  %>
+  <%= link_to "No",
+              offer_order_path(demand.offer, demand),
+              method: :delete,
+              data: { confirm: "Are you sure?" } %>
+<% end %>
