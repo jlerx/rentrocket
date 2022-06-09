@@ -43,17 +43,15 @@
       </div>
     </div>
     <%= render "shared/reviews"%>
-      <div class="offer-actions-title">
-        <h1 class="offer-title">Manage your Offer</h1>
-      </div>
-    <div class="actions">
-        <% if policy(@offer).update? %>
-            <%= link_to 'Edit', edit_offer_path, class: 'backlink' %>
-        <% end %>
-        <% if policy(@offer).destroy? %>
-            <%= link_to "Delete", offer_path(@offer), method: :delete, data: { confirm: "Are you sure?" } %>
-        <% end %>
+    <% if policy(@offer).update? && policy(@offer).destroy?%>
+    <div class="offer-actions-title">
+      <h1 class="offer-title">Manage your Offer</h1>
     </div>
+    <div class="actions">
+            <%= link_to 'Edit', edit_offer_path, class: 'backlink' %>
+            <%= link_to "Delete", offer_path(@offer), method: :delete, data: { confirm: "Are you sure?" } %>
+    </div>
+    <% end %>
 </div>
 <%= link_to "Delete", destroy_user_session_path, method: :delete, class: "btn-logout" %>
 <%= render "shared/navbar" %>
