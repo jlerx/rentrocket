@@ -4,11 +4,9 @@ class PagesController < ApplicationController
 
   def dashboard
     @user = current_user
-
     @offers = Offer.where(user: current_user)
     @orders = Order.where(user: current_user)
-
-    @offer = Offer.new
+    #@offer = Offer.new
 
     @demands_reservation = []
     @demands = Order.all
