@@ -1,3 +1,4 @@
+<% require 'date' %>
 <div class="index">
   <div class="top-section">
     <div class="search-bar-top">
@@ -22,7 +23,13 @@
     <div class="infos">
       <div class="description">
         <h1 class="model-name"><%= offer.title %></h1>
-        <h2 class="new">New *</h2>
+          <% date = Time.now.day %>
+          <% offer_date = offer.created_at %>
+          <% if offer_date.to_i == date.to_i %>
+            <h2 class="new">New *</h2>
+          <% else %>
+            <h2 class="new"></h2>
+          <% end %>
       </div>
         <h3 class="owner"><%= offer.user.name %>, Lyon - <%= offer.km_age %>km<br>
         <span id="price"><%= offer.price %>€</span> / day</h3>
