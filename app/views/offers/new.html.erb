@@ -4,16 +4,6 @@
     <h1 class="offer-title">Add a new offer</h1>
   </div>
   <div class="offer-form">
-    <%= simple_form_for @offer do |f| %>
-      <%= f.input :title, placeholder: "Enter the title of your offer"%>
-      <%= f.input :brand, placeholder: "Enter the car brand"%>
-      <%= f.input :model, placeholder: "Enter the car model" %>
-      <%= f.input :horsepower,as: :numeric, placeholder: "Enter the car's horsepower" %>
-      <%= f.input :year, as: :numeric, placeholder: 'Enter the car year' %>
-      <%= f.input :body_type, as: :numeric,  placeholder: 'Enter the door number' %>
-      <%= f.input :color, label: 'Choose the car color', :collection => %w[blue yellow red black]%>
-      <%= f.input :image ,label: "Choose your main Image"%>
-      <%= f.submit "Create"%>
-    <% end %>
+    <%= render "form" %>
   </div>
 </div>
