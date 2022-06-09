@@ -3,6 +3,15 @@
     <div class="search-bar-top">
     <h1>Welcome on RentRocket 🚀</h1>
     </div>
+    <span id="search-loop" class="iconify" data-icon="bi:search"></span>
+    <%= form_tag offers_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control",
+        placeholder: "Find a car"
+      %>
+      <%= submit_tag "Search", class: "btn btn-primary" %>
+    <% end %>
   </div>
   <% @offers.each do |offer| %>
   <%= link_to offer_path(offer) do%>

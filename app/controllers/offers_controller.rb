@@ -3,6 +3,11 @@ class OffersController < ApplicationController
 
   def index
     @offers = policy_scope(Offer).order(created_at: :desc)
+    if params[:query].present?
+      @offers = Offer.search_by_title(params[:query])
+    else
+      @offers = Offer.all
+    end
   end
 
   def show
