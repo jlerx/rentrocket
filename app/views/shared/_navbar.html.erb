@@ -21,13 +21,21 @@
   </div>
   <%= link_to dashboard_path do%>
   <div class="navbar-btn">
-  <% console %>
     <% if @orders %>
       <% pending = @orders.select {|order| order.status == true} %>
       <% if pending.count == 0 %>
       <% else %>
         <div class="notif">
           <span id="pending" style="color:white;"><%= pending.count%></span>
+        </div>
+      <% end %>
+    <% end %>
+    <% if @demands_reservation %>
+      <% reservs = @demands_reservation.count %>
+      <% if reservs == 0 %>
+      <% else %>
+        <div class="notif">
+          <span id="reserv" style="color:red;"><%= reservs%></span>
         </div>
       <% end %>
     <% end %>
