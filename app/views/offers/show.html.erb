@@ -27,22 +27,33 @@
 
     <div class="options">
       <div class="options-text">
-        <h4 class="options-title"><%= @offer.horsepower %>CV  ·  <%= @offer.user.name %></h4>
+        <h4 class="options-title"><%= @offer.horsepower %>CV ·  <%= @offer.user.name %></h4>
         <p class="options-p"><%= @offer.body_type %> seats</p>
       </div>
     </div>
 
     <div class="booking">
       <div class="price">
-        <h4 class="price-title"> <span id="price-amount"><%= @offer.price %></span> € / day</h4>
+        <h4 class="price-title"><span id="price-amount"><%= @offer.price %></span> € / day</h4>
       </div>
       <div class="booking-div">
         <div class="book-bouton">
-          <%= link_to "book",  new_offer_order_path(@offer) %>
+          <%= link_to "book", new_offer_order_path(@offer) %>
         </div>
+        <% if policy(@offer).update? %>
+          <div class="book-bouton">
+            <%= link_to 'Edit', edit_offer_path, class: 'backlink' %>
+          </div>
+        <% end %>
+        <% if policy(@offer).destroy? %>
+          <div class="book-bouton">
+            <%= link_to "Delete", offer_path(@offer), method: :delete, data: { confirm: "Are you sure?" } %>
+          </div>
+        <% end %>
       </div>
     </div>
     <%= render "shared/reviews" %>
 </div>
 <%= link_to "Delete", destroy_user_session_path, method: :delete, class: "btn-logout" %>
 <%= render "shared/navbar" %>
+
