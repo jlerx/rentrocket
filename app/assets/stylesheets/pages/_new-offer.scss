@@ -29,6 +29,7 @@
     }
   }
   .offer-form {
+    padding: 50px;
     margin-top: 40px;
     width: 100%;
     display: flex;
@@ -48,22 +49,22 @@
       // padding: 10px 30px;
       border-radius: 12px;
       background-color: white;
+      opacity: 0.6;
       color: $blue;
       border: none;
-      font-size: 18px;
+      font-size: 15px;
       select {
         color: $blue;
       }
     }
     input {
       border-radius: 12px;
-      background-color: $pink;
+      padding: 10px;
+      background-color: white;
       opacity: 0.6;
       color: $blue;
-      ::placeholder {
-        color: $blue;
-        opacity: 1;
-      }
+
+
     }
 
 
