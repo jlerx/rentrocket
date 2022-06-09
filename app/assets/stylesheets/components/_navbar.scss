@@ -46,3 +46,16 @@
     height: 40px;
   }
 }
+
+
+#pending {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: red;
+  padding: 5px;
+  border-radius: 50%;
+  line-height: 1;
+}

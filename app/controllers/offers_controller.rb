@@ -2,6 +2,7 @@ class OffersController < ApplicationController
   before_action :set_offer, only: [:show, :edit, :update, :destroy]
 
   def index
+    @orders = Order.where(user: current_user)
     @offers = policy_scope(Offer).order(created_at: :desc)
     if params[:query].present?
       @offers = Offer.search_by_title(params[:query])
