@@ -4,6 +4,11 @@ class OffersController < ApplicationController
   def index
     @orders = Order.where(user: current_user)
     @offers = policy_scope(Offer).order(created_at: :desc)
+    @demands_reservation = []
+    @demands = Order.all
+    @demands.each do |demand|
+      @demands_reservation << demand if demand.offer.user == @user
+    end
     if params[:query].present?
       @offers = Offer.search_by_title(params[:query])
     else
