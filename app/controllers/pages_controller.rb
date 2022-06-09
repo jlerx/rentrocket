@@ -3,9 +3,18 @@ class PagesController < ApplicationController
   end
 
   def dashboard
+    @user = current_user
+
     @offers = Offer.where(user: current_user)
     @orders = Order.where(user: current_user)
+
     @offer = Offer.new
-    @user = current_user
+
+    @demands_reservation = []
+    @demands = Order.all
+    @demands.each do |demand|
+      @demands_reservation << demand if demand.offer.user == @user
+    end
+
   end
 end
