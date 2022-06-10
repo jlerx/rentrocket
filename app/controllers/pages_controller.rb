@@ -17,4 +17,14 @@ class PagesController < ApplicationController
   def favoris
     @offers = Offer.all
   end
+
+  def map
+    @offers = Offer.all
+    @markers = @offers.geocoded.map do |offer|
+      {
+        lat: offer.latitude,
+        lng: offer.longitude
+      }
+    end
+  end
 end
