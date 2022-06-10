@@ -23,6 +23,6 @@ class OrderPolicy < ApplicationPolicy
   end
 
   def update?
-    record.user == user || user.admin?
+    true
   end
 end
