@@ -9,5 +9,7 @@
       <%= f.input :body_type, as: :numeric,  placeholder: 'Enter the door number' %>
       <%= f.input :color, label: 'Choose the car color', :collection => %w[blue yellow red black]%>
       <%= f.input :image ,label: "Choose your main Image"%>
+      <%= f.input :address , placeholder: "Address, City"%>
+<% console %>
       <%= f.submit "Create"%>
     <% end %>

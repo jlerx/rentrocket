@@ -3,6 +3,8 @@
     <span class="iconify" data-icon="fluent:new-24-filled"></span>
     <h1 class="offer-title">Add a new offer</h1>
   </div>
-<%= render 'form', offer: @offer %>
+  <div class="offer-form">
+    <%= render 'form', offer: @offer %>
+  </div>
 <%= link_to 'Back', offers_path %>
 </div>
