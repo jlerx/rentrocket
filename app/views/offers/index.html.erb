@@ -31,7 +31,7 @@
             <h2 class="new"></h2>
           <% end %>
       </div>
-        <h3 class="owner"><%= offer.user.name %>, Lyon - <%= offer.km_age %>km<br>
+        <h3 class="owner"><%= offer.user.name %>, <%= offer.address.split(",").last %> - <%= offer.km_age %>km<br>
         <span id="price"><%= offer.price %>€</span> / day</h3>
     </div>
   </div>
