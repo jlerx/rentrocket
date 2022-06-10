@@ -32,27 +32,28 @@
       </div>
     </div>
     <% if @offer.user_id != current_user.id %>
-    <div class="booking">
-      <div class="price">
-        <h4 class="price-title"><span id="price-amount"><%= @offer.price %></span> € / day</h4>
-      </div>
-      <div class="booking-div">
-        <div class="book-bouton">
-          <%= link_to "book", new_offer_order_path(@offer) %>
+      <div class="booking">
+        <div class="price">
+          <h4 class="price-title"><span id="price-amount"><%= @offer.price %></span> € / day</h4>
+        </div>
+        <div class="booking-div">
+          <div class="book-bouton">
+            <%= link_to "book", new_offer_order_path(@offer) %>
+          </div>
         </div>
       </div>
-    </div>
     <% end %>
-    <%= render "shared/reviews"%>
-    <% if policy(@offer).update? && policy(@offer).destroy?%>
-    <div class="offer-actions-title">
-      <h1 class="offer-title">Manage your Offer</h1>
-    </div>
-    <div class="actions">
-            <%= link_to 'Edit', edit_offer_path, class: 'backlink' %>
-            <%= link_to "Delete", offer_path(@offer), method: :delete, remote: true, data: { confirm: "Do you want to delete your offer" } %>
-    </div>
+    <%= render "shared/reviews" %>
+    <% if policy(@offer).update? && policy(@offer).destroy? %>
+      <div class="offer-actions-title">
+        <h1 class="offer-title">Manage your Offer</h1>
+      </div>
+      <div class="actions">
+        <%= link_to 'Edit', edit_offer_path, class: 'backlink' %>
+        <%= link_to "Delete", offer_path(@offer), method: :delete, remote: true, data: { confirm: "Do you want to delete your offer" } %>
+      </div>
     <% end %>
+  </div>
+  <%= link_to "Delete", destroy_user_session_path, method: :delete, remote: true, class: "btn-logout" %>
+  <%= render "shared/navbar" %>
 </div>
-<%= link_to "Delete", destroy_user_session_path, method: :delete, remote: true, class: "btn-logout" %>
-<%= render "shared/navbar" %>

@@ -5,60 +5,68 @@
   </div>
   <div class="my-offers">
     <span class="iconify" data-icon="ic:baseline-local-offer"></span>
-    <h1>My Offer<%= @offers.count >= 1 ? "s": ""%><span>&nbsp;(</span><%= @offers.count %></span>)</h1>
+    <h1>My Offer<%= @offers.count >= 1 ? "s" : "" %><span>&nbsp;(</span><%= @offers.count %></span>)</h1>
   </div>
-      <div class="offer-container-dashboard">
-      <% @offers.each do |offer| %>
-        <div class="dashboard-offer">
-          <h1><%= offer.title %></h1>
-          <h1><%= offer.price %> / day</h1>
-          <div class="img-status">
-            <%= link_to offer_path(offer) do%>
+  <div class="offer-container-dashboard">
+    <% @offers.each do |offer| %>
+      <div class="dashboard-offer">
+        <h1><%= offer.title %></h1>
+        <h1><%= offer.price %> / day</h1>
+        <div class="img-status">
+          <%= link_to offer_path(offer) do %>
             <div class="offer-img" style="background-image: url(<%= offer.image.attached? ? cl_image_path(offer.image.key) : asset_path("ferrari.jpg") %>)"></div>
-            <% end %>
-            <div class="offer-demands">
+          <% end %>
+          <div class="offer-demands">
             <ul>
-            <% requests = @demands.select {|demand| demand.offer_id == offer.id }%>
-            <% if requests.count == 0 %>
-              <li>No Request yet</li>
-            <% else requests %>
-              <% @demands.each do |demand| %>
-              <% requests.each do |request| %>
+              <% requests = @demands.select { |demand| demand.offer_id == offer.id } %>
+              <% if requests.count == 0 %>
+                <li>No Request yet</li>
+              <% else
+                   requests %>
+                <% @demands.each do |demand| %>
+                  <% requests.each do |request| %>
 
-              <li><strong>1 request</strong>&nbsp;by&nbsp;<%= request.user.name %></li>
-              <%= link_to "Accept",
-              offer_order_path(demand.offer, demand),
-              method: :patch
-              %>
-              <%= link_to "Refuse",
-              offer_order_path(demand.offer, demand),
-              method: :delete,
-              data: { confirm: "Are you sure?" } %>
+                    <li><strong>1 request</strong>&nbsp;by&nbsp;<%= request.user.name %></li>
+                    <% if demand.status == true %>
+                      <%= link_to "Accept",
+                                  offer_order_path(demand.offer, demand),
+                                  method: :patch
+                      %>
+                      <%= link_to "Refuse",
+                                  offer_order_path(demand.offer, demand),
+                                  method: :delete,
+                                  data: { confirm: "Are you sure?" } %>
+                    <% else %>
+                      <strong>Réservé du <%= demand.date_start %> au <%= demand.date_end %></strong>
+                    <% end %>
+                  <% end %>
+                <% end %>
               <% end %>
-              <% end %>
-            <% end %>
             </ul>
-            </div>
           </div>
         </div>
-      <% end %>
       </div>
+    <% end %>
+  </div>
   <div class="my-offers">
     <span class="iconify" data-icon="wpf:car-rental"></span>
-    <h1>My order<%= @demands_reservation.count >= 1 ? "s": ""%><span>&nbsp;(</span><%= @demands_reservation.count %></span>)</h1>
+    <h1>My order<%= @demands_reservation.count >= 1 ? "s" : "" %>
+      <span>&nbsp;(</span><%= @demands_reservation.count %></span>)</h1>
   </div>
-      <%  @demands_reservation.each do |demand|%>
-        <% offer = demand.offer %>
-        <div class="demand-img" style="background-image: url(<%= demand.offer.image.attached? ? cl_image_path(demand.offer.image.key) : asset_path("ferrari.jpg") %>)">
-          <h1><%= demand.offer.title %></h1>
-          <% if demand.status == false %>
-            <span class="iconify" data-icon="bi:check"></span>
-          <% else %>
-            <span class="iconify" data-icon="bxs:hourglass-bottom"></span>
-          <% end %>
-        </div>
-      <% end %>
-      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-logout" %>
-    </div>
-  <%= render "shared/navbar" %>
+  <% @demands_reservation.each do |demand| %>
+    <% offer = demand.offer %>
+    <% if demand.offer.user_id != current_user.id %>
+      <div class="demand-img" style="background-image: url(<%= demand.offer.image.attached? ? cl_image_path(demand.offer.image.key) : asset_path("ferrari.jpg") %>)">
+        <h1><%= demand.offer.title %></h1>
+        <% if demand.status == false %>
+          <span class="iconify" data-icon="bi:check"></span>
+        <% else %>
+          <span class="iconify" data-icon="bxs:hourglass-bottom"></span>
+        <% end %>
+        <%= link_to "Annuler", order_path(demand), method: :delete, data: { confirm: "Are you sure?" }, class: 'backlink' %>
+      </div>
+    <% end %>
+  <% end %>
+  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-logout" %>
 </div>
+<%= render "shared/navbar" %>
