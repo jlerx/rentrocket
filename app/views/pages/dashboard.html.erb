@@ -5,7 +5,7 @@
   </div>
   <div class="my-offers">
     <span class="iconify" data-icon="ic:baseline-local-offer"></span>
-    <h1>My Offer<%= @offers.count >= 1 ? "": "s"%><span>&nbsp;(</span><%= @offers.count %></span>)</h1>
+    <h1>My Offer<%= @offers.count >= 1 ? "s": ""%><span>&nbsp;(</span><%= @offers.count %></span>)</h1>
   </div>
       <div class="offer-container-dashboard">
       <% @offers.each do |offer| %>
@@ -45,21 +45,20 @@
       </div>
   <div class="my-offers">
     <span class="iconify" data-icon="wpf:car-rental"></span>
-    <h1>My Request<%= @demands_reservation.count >= 1 ? "": "s"%><span>&nbsp;(</span><%= @demands_reservation.count %></span>)</h1>
+    <h1>My Request<%= @demands_reservation.count >= 1 ? "s": ""%><span>&nbsp;(</span><%= @demands_reservation.count %></span>)</h1>
   </div>
-
-          <%  @demands_reservation.each do |demand|%>
-            <% offer = demand.offer %>
-            <div class="demand-img" style="background-image: url(<%= demand.offer.image.attached? ? cl_image_path(demand.offer.image.key) : asset_path("ferrari.jpg") %>)">
-              <h1><%= demand.offer.title %></h1>
-              <% if demand.status == false %>
-                <span class="iconify" data-icon="bi:check"></span>
-              <% else %>
-                <span class="iconify" data-icon="bxs:hourglass-bottom"></span>
-              <% end %>
-            </div>
+      <%  @demands_reservation.each do |demand|%>
+        <% offer = demand.offer %>
+        <div class="demand-img" style="background-image: url(<%= demand.offer.image.attached? ? cl_image_path(demand.offer.image.key) : asset_path("ferrari.jpg") %>)">
+          <h1><%= demand.offer.title %></h1>
+          <% if demand.status == false %>
+            <span class="iconify" data-icon="bi:check"></span>
+          <% else %>
+            <span class="iconify" data-icon="bxs:hourglass-bottom"></span>
           <% end %>
+        </div>
+      <% end %>
+      <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-logout" %>
     </div>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-logout" %>
   <%= render "shared/navbar" %>
 </div>

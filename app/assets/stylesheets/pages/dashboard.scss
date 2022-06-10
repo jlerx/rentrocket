@@ -1,8 +1,4 @@
 .dashboard-view {
-  margin-bottom: 100px;
-  .offer-container-dashboard {
-    justify-content: flex-start;
-  }
   .btn-logout {
     background-color: $pink;
     display: flex;
@@ -21,9 +17,14 @@
     border: $blue 1px solid;
     margin: auto;
     margin-bottom: 20px;
+    margin-top: 20px;
     border: none;
     border-radius: 12px;
     padding: 12px 30px;
+  }
+  margin-bottom: 100px;
+  .offer-container-dashboard {
+    justify-content: flex-start;
   }
   background: $blue;
   display: flex;
