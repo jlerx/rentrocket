@@ -15,10 +15,12 @@
     <label>cars</label>
   </div>
   <% end %>
+  <%= link_to map_path do %>
   <div class="navbar-btn">
-    <span class="iconify" data-icon="bi:chat-square">messages</span>
-    <label>messages</label>
+    <span class="iconify" data-icon="akar-icons:map"></span>
+    <label>map</label>
   </div>
+  <%end%>
   <%= link_to dashboard_path do%>
   <div class="navbar-btn">
     <% if @orders %>
