@@ -9,7 +9,7 @@ class OffersController < ApplicationController
     @demands = Order.all
     @demands.select do |demand|
       demand.user_id == current_user.id
-      
+
       @demands_reservation << demand
     end
     if params[:query].present?
@@ -64,6 +64,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:title, :price, :brand, :model, :year, :horsepower, :km_age, :body_type, :user_id, :image)
+    params.require(:offer).permit(:title, :price, :brand, :model, :year, :horsepower, :km_age, :body_type, :user_id, :image )
   end
 end

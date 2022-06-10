@@ -45,7 +45,7 @@
       </div>
   <div class="my-offers">
     <span class="iconify" data-icon="wpf:car-rental"></span>
-    <h1>My Request<%= @demands_reservation.count >= 1 ? "s": ""%><span>&nbsp;(</span><%= @demands_reservation.count %></span>)</h1>
+    <h1>My order<%= @demands_reservation.count >= 1 ? "s": ""%><span>&nbsp;(</span><%= @demands_reservation.count %></span>)</h1>
   </div>
       <%  @demands_reservation.each do |demand|%>
         <% offer = demand.offer %>
