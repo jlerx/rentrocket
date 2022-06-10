@@ -36,7 +36,10 @@
     </div>
   </div>
   <% end %>
-<% end %>
-  <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-logout" %>
+  <% end %>
+  <div class="map-button">
+    <a href="#">Map</a>
+    <span class="iconify" data-icon="akar-icons:map"></span>
+  </div>
   <%= render "shared/navbar" %>
 </div>

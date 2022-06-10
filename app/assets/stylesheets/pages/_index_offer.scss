@@ -82,3 +82,33 @@
 body > div.index > div.top-section > form > input.btn.btn-primary {
   display: none;
 }
+
+body > div.index > div.map-button {
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  align-items: center;
+  flex-direction: row;
+  background-color: $pink;
+  height: 36px;
+  width: 86px;
+  margin-bottom: 50px;
+  margin-left: 40%;
+  border-radius: 50px;
+  a {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #001A30;
+    text-decoration: none;
+  }
+  .iconify {
+    color: white;
+  }
+}
