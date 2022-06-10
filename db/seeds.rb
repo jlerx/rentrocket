@@ -60,6 +60,7 @@ vhl1 = Offer.create(
   body_type: "3",
   year: 1985,
   color: "red",
+  address: "16 Villa Gaudelet, Paris",
   user: user1
 )
 
@@ -73,6 +74,7 @@ vhl2 = Offer.create(
   body_type: "5",
   year: 2003,
   color: "black",
+  address: "21 rue Haxo, Marseille",
   user: user2
 )
 
@@ -86,6 +88,7 @@ vhl3 = Offer.create(
   body_type: "4",
   year: 2006,
   color: "yellow",
+  address: "20 rue Paradis, Marseille",
   user: user3
 )
 
@@ -99,6 +102,7 @@ vhl4 = Offer.create(
   body_type: "4",
   year: 1995,
   color: "red",
+  address: "8 rue du cherche-midi, Paris",
   user: user4
 )
 
@@ -112,6 +116,7 @@ vhl5 = Offer.create(
   body_type: "2",
   year: 1985,
   color: "black",
+  address: "5 Avenue du Maréchal Foch, Biarritz",
   user: user2
 )
 
@@ -125,6 +130,7 @@ vhl6 = Offer.create(
   body_type: "3",
   year: 2002,
   color: "yellow",
+  address: "58 avenue de la République, Lyon",
   user: user1
 )
 
@@ -138,3 +144,5 @@ vhl5.image.attach(io: img5, filename: 'lambo.jpg', content_type: 'image/jpg')
 vhl6.image.attach(io: img6, filename: 'honda.jpg', content_type: 'image/jpg')
 
 puts ("Images attachées")
+
+puts "address generate"
