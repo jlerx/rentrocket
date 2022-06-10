@@ -21,8 +21,16 @@ class OffersController < ApplicationController
 
   def show
     @order = Order.new
+    @demands_reservation = []
+    @demands = Order.all
+    @demands.select do |demand|
+      demand.user_id == current_user.id
+
+      @demands_reservation << demand
+    end
     authorize @order
     authorize @offer
+
   end
 
   def new

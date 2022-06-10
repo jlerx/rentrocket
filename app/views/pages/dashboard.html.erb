@@ -21,8 +21,7 @@
               <% requests = @demands.select { |demand| demand.offer_id == offer.id } %>
               <% if requests.count == 0 %>
                 <li>No Request yet</li>
-              <% else
-                   requests %>
+              <% else %>
                 <% @demands.each do |demand| %>
                   <% requests.each do |request| %>
 
@@ -37,7 +36,7 @@
                                   method: :delete,
                                   data: { confirm: "Are you sure?" } %>
                     <% else %>
-                      <strong>Réservé du <%= demand.date_start %> au <%= demand.date_end %></strong>
+                      <strong>Réservé du <%= demand.date_start.day %> au <%= demand.date_end.day %> </strong>
                     <% end %>
                   <% end %>
                 <% end %>
@@ -56,6 +55,7 @@
   <% @demands_reservation.each do |demand| %>
     <% offer = demand.offer %>
     <% if demand.offer.user_id != current_user.id %>
+      <%= link_to offer_path(offer) do %>
       <div class="demand-img" style="background-image: url(<%= demand.offer.image.attached? ? cl_image_path(demand.offer.image.key) : asset_path("ferrari.jpg") %>)">
         <h1><%= demand.offer.title %></h1>
         <% if demand.status == false %>
@@ -63,8 +63,13 @@
         <% else %>
           <span class="iconify" data-icon="bxs:hourglass-bottom"></span>
         <% end %>
-        <%= link_to "Annuler", order_path(demand), method: :delete, data: { confirm: "Are you sure?" }, class: 'backlink' %>
+        <div class="cancel">
+        <%= link_to  order_path(demand), method: :delete, data: { confirm: "Are you sure?" }, class: 'backlink' do%>
+        <span class="iconify" data-icon="charm:circle-cross"></span>
+        <% end %>
+        </div>
       </div>
+      <% end %>
     <% end %>
   <% end %>
   <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-logout" %>

@@ -31,7 +31,8 @@
         <p class="options-p"><%= @offer.body_type %> seats</p>
       </div>
     </div>
-    <% if @offer.user_id != current_user.id %>
+    <% reserved = @demands_reservation.select {|demand| demand.offer_id == @offer.id} %>
+    <% if @offer.user_id != current_user.id && reserved.count == 0%>
       <div class="booking">
         <div class="price">
           <h4 class="price-title"><span id="price-amount"><%= @offer.price %></span> € / day</h4>
@@ -40,6 +41,21 @@
           <div class="book-bouton">
             <%= link_to "book", new_offer_order_path(@offer) %>
           </div>
+        </div>
+      </div>
+    <% elsif reserved.count == 1 && reserved.count == 1%>
+    <% demand = @demands[0] %>
+    <div class="booking">
+        <div class="price">
+        <% months = ["Janvier", "Février", "Mars", "Avril", "Mai" , "Juin", "Juillet" , "Aout" , "Septembre", "Octobre", "Novembre", "Décembre"] %>
+          <h4 class="price-title">Déjà réservé du <%= demand.date_start.day%> au <%=  demand.date_end.day%> <%= months[demand.date_start.month - 1] %></h4>
+        </div>
+      </div>
+    <% elsif @offer.user_id == current_user.id%>
+    <% else %>
+    <div class="booking">
+        <div class="price">
+          <h4 class="price-title">Déjà réservé</h4>
         </div>
       </div>
     <% end %>
@@ -56,4 +72,5 @@
   </div>
   <%= link_to "Delete", destroy_user_session_path, method: :delete, remote: true, class: "btn-logout" %>
   <%= render "shared/navbar" %>
+  <% console %>
 </div>
