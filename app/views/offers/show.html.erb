@@ -31,7 +31,7 @@
         <p class="options-p"><%= @offer.body_type %> seats</p>
       </div>
     </div>
-
+    <% if @offer.user_id != current_user.id %>
     <div class="booking">
       <div class="price">
         <h4 class="price-title"><span id="price-amount"><%= @offer.price %></span> € / day</h4>
@@ -42,6 +42,7 @@
         </div>
       </div>
     </div>
+    <% end %>
     <%= render "shared/reviews"%>
     <% if policy(@offer).update? && policy(@offer).destroy?%>
     <div class="offer-actions-title">

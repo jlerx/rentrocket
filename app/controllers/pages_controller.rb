@@ -9,7 +9,12 @@ class PagesController < ApplicationController
     @demands_reservation = []
     @demands = Order.all
     @demands.select do |demand|
-      demand.offer.user == @user
+      demand.user_id == current_user.id
+      @demands_reservation << demand
     end
+  end
+
+  def favoris
+    @offers = Offer.all
   end
 end

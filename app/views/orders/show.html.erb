@@ -1,3 +1,18 @@
-<% @orders.each do |order| %>
-  <%= order %>
+<p>
+- <%= demand.offer.title %>
+Pour <%= demand.user.name %>,
+<%= demand.user.email %>,
+Du <%= demand.date_start %>
+Au <%= demand.date_end %>
+<%= link_to "OK",
+offer_order_path(demand.offer, demand),
+method: :patch
+%>
+<p>
+<%= link_to "NO",
+offer_order_path(demand.offer, demand), method: :delete, data: { confirm: "Are you sure?" } %>
 <% end %>
+
+
+<% requests = @demands_reservation.select {|demand| demand.offer_id == offer.id }%>
+<%= requests %>

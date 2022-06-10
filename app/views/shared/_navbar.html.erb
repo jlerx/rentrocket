@@ -30,14 +30,18 @@
         </div>
       <% end %>
     <% end %>
+    <% if @offers %>
+    <% @offers.each do |offer| %>
     <% if @demands_reservation %>
-      <% reservs = @demands_reservation.count %>
-      <% if reservs == 0 %>
+      <% requests = @demands.select {|demand| demand.offer_id == offer.id } %>
+      <% if requests.count == 0 %>
       <% else %>
         <div class="notif">
-          <span id="reserv" style="color:red;"><%= reservs%></span>
+          <span id="reserv"><%= requests.count%></span>
         </div>
       <% end %>
+    <% end %>
+    <% end %>
     <% end %>
     <span class="iconify" data-icon="clarity:dashboard-solid"></span>
     <label>dashboard</label>
