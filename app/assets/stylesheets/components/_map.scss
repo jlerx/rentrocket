@@ -1,0 +1,41 @@
+.mapboxgl-popup {
+  width: 250px;
+  height: 100px;
+}
+
+.mapboxgl-popup-content {
+  border-radius: 12px;
+  background-color: $blue;
+  text-align: center;
+  font-family: "Montserrat";
+  color: white;
+  h2 {
+    color: $pink !important;
+    text-decoration: underline;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+  h2 , p {
+    color: white;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 22px;
+    justify-content: left;
+    margin-top: 15px;
+    color: white;
+    margin-left: 0;
+  }
+  
+}
+
+
+.mapboxgl-marker {
+  background-image: url('../../images/img_434394.png');
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+}

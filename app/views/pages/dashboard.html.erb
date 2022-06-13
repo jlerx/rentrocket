@@ -36,7 +36,7 @@
                                   method: :delete,
                                   data: { confirm: "Are you sure?" } %>
                     <% else %>
-                      <strong>Réservé du <%= demand.date_start.day %> au <%= demand.date_end.day %> </strong>
+                      <li><strong>Réservé du <%= demand.date_start.day %> au <%= demand.date_end.day %> </strong></li>
                     <% end %>
                   <% end %>
                 <% end %>
@@ -75,3 +75,4 @@
   <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "btn-logout" %>
 </div>
 <%= render "shared/navbar" %>
+

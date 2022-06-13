@@ -6,7 +6,7 @@
     <div class="description">
       <div class="title">
         <h1 class="model-name"><%= @offer.title %></h1>
-        <h3 class="owner"><%= @offer.user.name %>, Lyon - <%= @offer.km_age %>km<br></h3>
+        <h3 class="owner"><%= @offer.user.name %>, <%= @offer.address ? @offer.address.split(" ").last : ""%> - <%= @offer.km_age %>km<br></h3>
       </div>
     </div>
 
@@ -72,5 +72,4 @@
   </div>
   <%= link_to "Delete", destroy_user_session_path, method: :delete, remote: true, class: "btn-logout" %>
   <%= render "shared/navbar" %>
-  <% console %>
 </div>
