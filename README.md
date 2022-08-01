@@ -1,1 +1,15 @@
-Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/rails-templates), created by the [Le Wagon coding bootcamp](https://www.lewagon.com) team.
+Final Version AirBnb Style of a renting car application
+
+View on : https://rentrocketbytakeoff.herokuapp.com/
+To Do
+
+Clean the code
+Responsive
+Front Dev
+Developpers :
+
+Valentin Marcoux : FullStack dev and Lead Developper of this project (me)
+Julien Leroux : Back Dev https://github.com/jlerx
+Mathilde Perriol : Project Owner and front dev https://github.com/mathilde-perriol
+Clémence Dumont : Project Manager and front dev https://github.com/ClemDums
+Thank you for Reading ! If you love our job, please leave a Star <3
