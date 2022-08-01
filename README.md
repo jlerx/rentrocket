@@ -10,8 +10,8 @@
 
 **Developpers :**
 
-- Valentin Marcoux : FullStack dev and Lead Developper of this project (me)
-- Julien Leroux : Back Dev https://github.com/jlerx
+- Valentin Marcoux : FullStack dev and Lead Developper of this project https://github.com/ValentinModding
+- Julien Leroux : Back Dev 
 - Mathilde Perriol : Project Owner and front dev https://github.com/mathilde-perriol
 - Clémence Dumont : Project Manager and front dev https://github.com/ClemDums
 
