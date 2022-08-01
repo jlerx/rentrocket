@@ -1,15 +1,20 @@
-Final Version AirBnb Style of a renting car application
+**Final Version AirBnb Style of a renting car application**
 
-View on : https://rentrocketbytakeoff.herokuapp.com/
-To Do
+- View on : [https://rentrocketbytakeoff.herokuapp.com/](https://rentrocketbytakeoff.herokuapp.com/)
 
-Clean the code
-Responsive
-Front Dev
-Developpers :
+**To Do**
+- Clean the code 
+- Responsive
+- Front Dev
 
-Valentin Marcoux : FullStack dev and Lead Developper of this project (me)
-Julien Leroux : Back Dev https://github.com/jlerx
-Mathilde Perriol : Project Owner and front dev https://github.com/mathilde-perriol
-Clémence Dumont : Project Manager and front dev https://github.com/ClemDums
-Thank you for Reading ! If you love our job, please leave a Star <3
+
+**Developpers :**
+
+- Valentin Marcoux : FullStack dev and Lead Developper of this project (me)
+- Julien Leroux : Back Dev https://github.com/jlerx
+- Mathilde Perriol : Project Owner and front dev https://github.com/mathilde-perriol
+- Clémence Dumont : Project Manager and front dev https://github.com/ClemDums
+
+
+Thank you for Reading ! 
+If you love our job, please leave a Star <3
